@@ -38,8 +38,9 @@ input[type="number"]
 
  input[type="add info"]
  {
-        padding: 5rem;
-        font-size: 0.5rem;
+        padding: 2em;
+        width: 50%;
+        font-size: 2rem;
     }
 
 #photoGallery img {
@@ -49,13 +50,22 @@ input[type="number"]
     margin: 5px; 
 }
 
+.photo-container {
+    display: inline-block;
+    margin: 10px;
+}
 
+.like-button {
+    background-color:maroon;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
 
-
-
-
-
-
+.like-button:hover {
+    background-color: #1a691c;
+}
 
 button {
     padding: 0.75rem 1.5rem;

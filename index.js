@@ -1,8 +1,5 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Your JavaScript code goes here
-});
-
-
+document.addEventListener('DOMContentLoaded', async () => {
+})
 const apiKey = 'f5eQtWZTPDOqEZakJJmMAUtoijj66JajXxacNwlqZpU';
 const apiUrl = 'https://api.unsplash.com';
 
@@ -34,12 +31,28 @@ function displayPhotos(photos) {
     photoGallery.innerHTML = '';
 
     photos.forEach((photo) => {
+        const photoContainer =document.createElement('div');
+        photoContainer.className ='photo-container';
+
         const imgElement = document.createElement('img');
         imgElement.src = photo.urls.regular;
         imgElement.alt = photo.alt_description;
-        photoGallery.appendChild(imgElement);
+
+        const likeButton = document.createElement('button');
+        likeButton.className = 'like-button';
+        likeButton.textContent = 'Like';
+        likeButton.addEventListener('click', () => handleLike(photo.id));
+
+        photoContainer.appendChild(imgElement);
+        photoContainer.appendChild(likeButton);
+        photoGallery.appendChild(photoContainer);
     });
 }
+function handleLike(photoId) {
+    
+    console.log(`Liked photo with ID: ${photoId}`);
+}
+
 
 document.addEventListener('DOMContentLoaded', async () => {
     try {
@@ -52,12 +65,31 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 
 
-submitButton.addEventListener('click',function(){
-    submitReg();
+document.addEventListener('click', (event) => {
+    if (event.target.classList.contains('photoGallery img')) {
+        const imgUrl = event.target.src;
+        displayLargerImage(imgUrl);
+    }
 });
-function submitReg() {
-    alert('registration successful');
+
+function displayLargerImage(imgUrl) {
+
+    console.log('Displaying larger image:', imgUrl);
 }
+
+
+const registerInfo= document.querySelector('#registrationForm');
+registerInfo.addEventListener('submit', function (event) {
+    event.preventDefault()
+
+    console.log('registration complete');
+});
+function clickButton () {
+    document.getElementById('sub').addEventListener(click,function (){
+        alert('regestration successful')
+    })
+}
+
 
 
 
