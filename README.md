@@ -1,4 +1,21 @@
+
+
+project or program name - Eco-volunteer hub
+author name - Caroline Kahuro
+description of project - This is a SPA for registering volunteers to do enviromental activities.
+project setup instructions - 
+├── index.html
+├── styles.js
+├── script.css
+├── images
+├── README.md 
+├── other-files
+
+link to live site on GitHub Pages - 
+
+
 # Phase 1 Project Guidelines
+
 
 ## Learning Goals
 
@@ -170,3 +187,4 @@ You can consult the [json-server docs][] for more information.
 - [json-server][]
 
 [json-server]: https://www.npmjs.com/package/json-server
+
